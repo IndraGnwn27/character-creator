@@ -29,6 +29,7 @@ function App() {
   );
 
   return (
+    <>
     <main className={styles.characterEditor}>
       <MaxWidthWrapper className={styles.maxWidthWrapper}>
         <header className={styles.header}>
@@ -43,41 +44,34 @@ function App() {
             title="Bodies"
             options={bodyOptions}
             currentOption={body}
-            handleSelectOption={setBody}
-          />
+            handleSelectOption={setBody} />
           <ControlPane
             title="Heads"
             options={headOptions}
             currentOption={head}
-            handleSelectOption={setHead}
-          />
+            handleSelectOption={setHead} />
           <ControlPane
             title="Faces"
             options={faceOptions}
             currentOption={face}
-            handleSelectOption={setFace}
-          />
+            handleSelectOption={setFace} />
           <ControlPane
             title="Accessories"
             options={accessoryOptions}
             currentOption={accessory}
-            handleSelectOption={setAccessory}
-          />
+            handleSelectOption={setAccessory} />
           <ControlPane
             title="Skin Color"
             options={skinColorOptions}
             currentOption={skinColor}
-            handleSelectOption={setSkinColor}
-          />
+            handleSelectOption={setSkinColor} />
           <ControlPane
             title="Clothing Color"
             options={clothesColorOptions}
             currentOption={clothesColor}
-            handleSelectOption={setClothesColor}
-          />
+            handleSelectOption={setClothesColor} />
         </div>
       </MaxWidthWrapper>
-
       <div className={styles.characterWrapper}>
         <Character
           body={body}
@@ -85,10 +79,12 @@ function App() {
           face={face}
           accessory={accessory}
           skinColor={skinColor}
-          clothesColor={clothesColor}
-        />
+          clothesColor={clothesColor} />
       </div>
+
     </main>
+    <div className={styles.perspectiveDecoration}></div></>
+
   );
 }
 
